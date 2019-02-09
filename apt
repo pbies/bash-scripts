@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+apt-get -y update
+
+packets=(
+	apt-get
+	aptitude
+	bash-completion
+	beep
+	busybox
+	ccrypt
+	cryptsetup
+	curl
+	dconf-tools
+	debsums
+	dkms
+	dnsutils
+	dos2unix
+	dosfstools
+	dpkg
+	eject
+	ethtool
+	exfat-fuse
+	exfat-utils
+	fail2ban
+	flac
+	ftpd
+	g++
+	gcc
+	gdisk
+	gksu
+	gpart
+	gparted
+	hal-info
+	hashalot
+	htop
+	libnss-winbind
+	links
+	lshw
+	mailutils
+	make
+	mc
+	mintupdate
+	ncurses-bin
+	netcat
+	ntfs-3g
+	openssh-server
+	openssl
+	p7zip-full
+	parallel
+	pciutils
+	powertop
+	printer-driver-splix
+	procinfo
+	putty
+	pv
+	pwgen
+	rcconf
+	rpm
+	rsync
+	samba
+	screen
+	scrub
+	secure-delete
+	smartmontools
+	smbclient
+	speedtest-cli
+	ssh
+	strace
+	synaptic
+	telnet
+	testdisk
+	tightvncserver
+	traceroute
+	udisks
+	udisks2
+	unrar
+	unzip
+	util-linux
+	wget
+	whoami
+	winbind
+	zerofree
+	zip
+)
+
+for packet in ${packets[*]}
+do
+	apt-get install -y "$packet"
+done
+
+apt-get clean
+apt-get -y autoclean
+apt-get -y autoremove
+
+echo -n "sync..." ; sync ; echo "ok"

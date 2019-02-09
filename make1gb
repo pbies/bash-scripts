@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo -n "sync..." ; sync ; echo "ok"
+dd if=/dev/zero of=1gb conv=fdatasync bs=1024k count=1k status=progress
+echo -n "sync..." ; sync ; echo "ok"

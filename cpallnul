@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo -n "sync..." ; sync ; echo "ok"
+time find . -type f -exec pv -N {} {} \; | wc -c

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo === WRITE 1GiB ===
+echo -n "sync..." ; sync ; echo "ok"
+echo 3 > /proc/sys/vm/drop_caches
+time {
+	dd if=/dev/zero of=temp conv=fdatasync bs=1024k count=1k status=progress
+	echo -n "sync..." ; sync ; echo "ok"
+}
+rm -f temp
+echo -n "sync..." ; sync ; echo "ok"
+echo Done.
