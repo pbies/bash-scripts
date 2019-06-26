@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+shopt -s globstar
+for file in ./**
+do
+	[ -d "$file" ] || LC_CTYPE=C grep -qP '[^\x00]' "$file" || echo "$file"
+done

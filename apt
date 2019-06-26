@@ -4,9 +4,10 @@ apt-get -y update
 packets=(
 	apt-get
 	aptitude
+	at
 	bash-completion
+	bc
 	beep
-	busybox
 	ccrypt
 	cryptsetup
 	curl
@@ -23,10 +24,10 @@ packets=(
 	exfat-utils
 	fail2ban
 	flac
-	ftpd
 	g++
 	gcc
 	gdisk
+	git
 	gksu
 	gpart
 	gparted
@@ -40,6 +41,7 @@ packets=(
 	make
 	mc
 	mintupdate
+	mtr
 	ncurses-bin
 	netcat
 	ntfs-3g
@@ -65,6 +67,7 @@ packets=(
 	smbclient
 	speedtest-cli
 	ssh
+	sshpass
 	strace
 	synaptic
 	telnet
@@ -73,9 +76,11 @@ packets=(
 	traceroute
 	udisks
 	udisks2
+	ufw
 	unrar
 	unzip
 	util-linux
+	vsftpd
 	wget
 	whoami
 	winbind
