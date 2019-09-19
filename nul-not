@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-LC_CTYPE=C grep -Pav '\x00' < "$*"
+LC_CTYPE=C grep -Pav '\x00' < "$1"

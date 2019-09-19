@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo -n "sync..." ; sync ; echo "ok"
-df -HB MB .
+df -HB MiB .
 pv -B 1M < /dev/zero >> "zeros.tmp"
 echo -n "sync..." ; sync ; echo "ok"
 pv -B 512 < /dev/zero >> "zeros.tmp"
@@ -10,4 +10,4 @@ echo -n cleaning...
 rm zeros.tmp
 echo ok
 echo -n "sync..." ; sync ; echo "ok"
-df -HB MB .
+df -HB MiB .
