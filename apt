@@ -9,6 +9,7 @@ packets=(
 	bc
 	beep
 	ccrypt
+	coreutils
 	cryptsetup
 	curl
 	dconf-tools
@@ -50,12 +51,15 @@ packets=(
 	p7zip-full
 	parallel
 	pciutils
+	perl
 	powertop
 	printer-driver-splix
 	procinfo
 	putty
 	pv
 	pwgen
+	python2
+	python3
 	rcconf
 	rpm
 	rsync
@@ -63,12 +67,14 @@ packets=(
 	screen
 	scrub
 	secure-delete
+	shellcheck
 	smartmontools
 	smbclient
 	speedtest-cli
 	ssh
 	sshpass
 	strace
+	swaks
 	synaptic
 	telnet
 	testdisk
