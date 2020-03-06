@@ -10,7 +10,6 @@ packets=(
 	beep
 	ccrypt
 	coreutils
-	cryptsetup
 	curl
 	dconf-tools
 	debsums
@@ -35,6 +34,7 @@ packets=(
 	hal-info
 	hashalot
 	htop
+	hwinfo
 	libnss-winbind
 	links
 	lshw
@@ -93,6 +93,8 @@ packets=(
 	zerofree
 	zip
 )
+
+apt-get purge -y cups
 
 for packet in ${packets[*]}
 do
