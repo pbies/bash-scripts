@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ls -1 /dev/mmc* /dev/nvme* /dev/sd*
