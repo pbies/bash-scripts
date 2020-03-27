@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo -n "sync..." ; sync ; echo "ok"
+sync
 dd if=/dev/urandom of=1GBurnd conv=fdatasync bs=1024k count=1k status=progress
-echo -n "sync..." ; sync ; echo "ok"
+sync

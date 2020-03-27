@@ -106,4 +106,4 @@ apt-get clean
 apt-get -y autoclean
 apt-get -y autoremove
 
-echo -n "sync..." ; sync ; echo "ok"
+sync

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo -n "sync..." ; sync ; echo "ok"
+sync
 pv -B 1M < /dev/urandom > /dev/null
-echo -n "sync..." ; sync ; echo "ok"
+sync

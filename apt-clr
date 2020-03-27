@@ -102,4 +102,4 @@ do
 	swupd bundle-add "$packet"
 done
 
-echo -n "sync..." ; sync ; echo "ok"
+sync
