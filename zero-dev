@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo -n "sync..." ; sync ; echo "ok"
+umount "/dev/$1"
+blockdev --getsize64 "/dev/$1"
+pv -B 1M < /dev/zero > "/dev/$1"
+echo -n "sync..." ; sync ; echo "ok"

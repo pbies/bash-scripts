@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pv -B 1M "/dev/$1" > "./$1.img"
+sync

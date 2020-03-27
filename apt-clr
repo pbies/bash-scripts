@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-apt-get -y update
+
+swupd update
 
 packets=(
 	apt-get
@@ -13,6 +14,7 @@ packets=(
 	curl
 	dconf-tools
 	debsums
+	dev-utils
 	dkms
 	dnsutils
 	dos2unix
@@ -95,15 +97,9 @@ packets=(
 	zip
 )
 
-apt-get purge -y cups
-
 for packet in ${packets[*]}
 do
-	apt-get install -y "$packet"
+	swupd bundle-add "$packet"
 done
-
-apt-get clean
-apt-get -y autoclean
-apt-get -y autoremove
 
 echo -n "sync..." ; sync ; echo "ok"

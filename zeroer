@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
+f="./zeros.tmp"
 echo -n "sync..." ; sync ; echo "ok"
 df -HB MiB .
-pv -B 1M < /dev/zero >> "zeros.tmp"
+pv -B 1M < /dev/zero >> "$f"
 echo -n "sync..." ; sync ; echo "ok"
-pv -B 512 < /dev/zero >> "zeros.tmp"
+pv -B 512 < /dev/zero >> "$f"
 sync
 df -HB 1 .
 echo -n cleaning...
-rm zeros.tmp
+rm "$f"
 echo ok
 echo -n "sync..." ; sync ; echo "ok"
 df -HB MiB .

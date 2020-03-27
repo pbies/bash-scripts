@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+apt-get -y update
+
+packets=(
+	apache2
+	mailutils
+	mysql-server
+	openssl
+	php
+	php-gd
+	php-mbstring
+	php-mysql
+	php-xml
+	postfix
+	samba
+	ssh
+	sshd
+)
+
+for packet in ${packets[*]}
+do
+	apt-get install -y "$packet"
+done
+
+apt purge cups
+
+apt-get clean
+apt-get -y autoclean
+apt-get -y autoremove
+
+echo -n "sync..." ; sync ; echo "ok"
