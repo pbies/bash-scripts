@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo "=== READ 1GiB /dev/$1 ==="
+sync
+dd if=/dev/$1 of=/dev/null bs=1048576 count=1024 conv=fdatasync status=progress
+sync

@@ -2,6 +2,7 @@
 apt-get -y update
 
 packets=(
+	amd64-microcode
 	apt-get
 	aptitude
 	at
@@ -36,6 +37,7 @@ packets=(
 	hexedit
 	htop
 	hwinfo
+	intel-microcode
 	libnss-winbind
 	links
 	lshw
