@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # (C) 2020 Piotr Biesiada
-# Bash script to fetch currecy values from NBP site for Dygraphs
+# Bash script to fetch currecy values from NBP site for PLN (Polish Złoty) for Dygraphs
+# It is using background call so it is really fast ("multithreaded")
 TMP1=$(curl -s -m 10 "http://www.nbp.pl/kursy/xml/dir.txt")
 output="wal.csv"
 echo "D,GBP,EUR,CHF,USD,NOK" > "$output"
