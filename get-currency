@@ -8,6 +8,7 @@ echo "D,GBP,EUR,CHF,USD,NOK" > "$output"
 while IFS= read -r p; do
 	if [[ ${p:0:1} == "a" ]] ; then
 	{
+		sleep .$RANDOM
 		a=$(echo -n "$p" | sed 's/\r//')
 		TMP2=$(curl -s -m 10 "http://www.nbp.pl/kursy/xml/$a.xml")
 		while IFS= read -r q; do
