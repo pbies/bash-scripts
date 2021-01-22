@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-LC_CTYPE=C grep -RLP '[^\x00]' .
+LC_CTYPE=C grep -RLPz '[^\x00]' .

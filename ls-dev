@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-ls -1 /dev/mmc* /dev/nvme* /dev/sd*
+find /dev -name mmc*
+find /dev -name nvme*
+find /dev -name sd*

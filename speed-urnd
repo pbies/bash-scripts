@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-sync
 pv -B 1M < /dev/urandom > /dev/null
-sync

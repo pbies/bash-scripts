@@ -3,14 +3,16 @@ apt-get -y update
 
 packets=(
 	apache2
+	docker-ce
+	docker.io
 	mailutils
 	mysql-server
 	openssl
-	php
-	php-gd
-	php-mbstring
-	php-mysql
-	php-xml
+	php7.4
+	php7.4-gd
+	php7.4-mbstring
+	php7.4-mysql
+	php7.4-xml
 	postfix
 	samba
 	ssh

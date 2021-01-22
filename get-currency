@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# (C) 2020 Piotr Biesiada
+# (C) 2021 Piotr Biesiada
 # Bash script to fetch currecy values from NBP site for PLN (Polish Złoty) for Dygraphs
 # It is using background call so it is really fast ("multithreaded")
 TMP1=$(curl -s -m 10 "http://www.nbp.pl/kursy/xml/dir.txt")
@@ -10,7 +10,7 @@ while IFS= read -r p; do
 	{
 		sleep .$RANDOM
 		a=$(echo -n "$p" | sed 's/\r//')
-		TMP2=$(curl -s -m 10 "http://www.nbp.pl/kursy/xml/$a.xml")
+		TMP2=$(until curl -s -m 10 "http://www.nbp.pl/kursy/xml/$a.xml"; do :; done)
 		while IFS= read -r q; do
 			if [[ ${q:0:12} == "   <data_pub" ]] ; then
 				d1="${q:20:10}"

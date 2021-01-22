@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # private hex bitcoin btc key to wif wallet import format
-# (C) 2020 Piotr Biesiada
+# (C) 2021 Piotr Biesiada
 # portions (C) 2013 Lucien Grondin
 privhex="$1"
 echo privhex: "$1"
